@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { fetchMovieById } from "../../services/api";
 import s from "./MovieDetailsPage.module.css";
@@ -39,7 +39,7 @@ const MovieDetailsPage = () => {
         </div>
       </div>
 
-      <div className={s.info}>
+      <div className={s.add_info}>
         <h4>Additional information</h4>
         <ul>
           <li>
@@ -49,6 +49,9 @@ const MovieDetailsPage = () => {
             <Link to="reviews">Reviews</Link>
           </li>
         </ul>
+      </div>
+      <div>
+        <Outlet />
       </div>
     </div>
   );
