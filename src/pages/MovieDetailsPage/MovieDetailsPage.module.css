@@ -1,0 +1,39 @@
+.img {
+  width: 300px;
+  margin-left: 60px;
+}
+
+.title {
+  margin-left: 60px;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.overview {
+  width: 80%;
+}
+
+.btn {
+  margin-left: 60px;
+  display: inline-flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.film_info {
+  margin-left: 60px;
+
+  h4 {
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 18px;
+    text-decoration: underline;
+  }
+}
