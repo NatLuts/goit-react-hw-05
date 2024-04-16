@@ -17,7 +17,7 @@ const HomePage = () => {
           <li key={movie.id}>
             <Link
               className={s.movie_name}
-              to={"/movies/" + movie.id.toString()}
+              to={location.state ?? "/movies/" + movie.id.toString()}
             >
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

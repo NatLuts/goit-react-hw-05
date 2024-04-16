@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  background: linear-gradient(rgb(234, 234, 239), rgb(145, 144, 144));
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -27,7 +28,6 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
-  background: linear-gradient(rgb(217, 217, 221), rgb(123, 122, 122));
 }
 
 h1 {

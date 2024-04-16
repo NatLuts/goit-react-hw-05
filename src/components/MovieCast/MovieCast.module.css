@@ -1,0 +1,21 @@
+.title {
+  margin-left: 60px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 150px repeat(6, 1fr);
+  gap: 20px;
+
+  li {
+    border: 2px solid gray;
+    padding: 15px;
+    width: 150px;
+  }
+  p {
+    margin: 0;
+  }
+  img {
+    height: 200px;
+  }
+}

@@ -1,5 +1,5 @@
-import { Link, Outlet, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Link, Outlet, useLocation, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 import { fetchMovieById } from "../../services/api";
 import s from "./MovieDetailsPage.module.css";
 import { BsArrowLeftCircleFill } from "react-icons/bs";
@@ -7,6 +7,8 @@ import { BsArrowLeftCircleFill } from "react-icons/bs";
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const location = useLocation();
+  const goBack = useRef(location.state?.from || "/");
 
   useEffect(() => {
     fetchMovieById(movieId).then((data) => setMovie(data));
@@ -18,7 +20,7 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <Link to="/">
+      <Link to={goBack.current || "/"}>
         <button className={s.btn} type="button">
           <BsArrowLeftCircleFill />
           Go back
