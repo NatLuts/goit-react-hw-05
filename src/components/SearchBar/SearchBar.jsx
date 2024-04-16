@@ -9,6 +9,7 @@ const SearchBar = ({ setSearchParams }) => {
   const handleSubmit = (values) => {
     console.log(values);
     setSearchParams(values.search ? { query: values.search } : {});
+    values.target.value.query.reset();
   };
 
   return (
